@@ -1,0 +1,405 @@
+/* Base styles remain the same as before until the media queries */
+
+/* Add these media queries at the end of your CSS file */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+    .navber {
+      padding: 10px 20px;
+    }
+  
+    .navber ul {
+      gap: 15px;
+    }
+  
+    .front-page {
+      padding: 20px;
+    }
+  
+    .in-front-page {
+      width: 60%;
+    }
+  
+    .front-img {
+      width: 40%;
+    }
+  
+    .pro {
+      width: 70%;
+    }
+  
+    .contant {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .contant-box {
+      width: 80%;
+      margin: 20px 0;
+    }
+  
+    .line {
+      display: none;
+    }
+  
+    .dishes {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .boxesDish {
+      width: 100%;
+    }
+  
+    .target {
+      padding: 20px;
+    }
+  
+    .terget-page {
+      width: 60%;
+    }
+  
+    .leftSide {
+      width: 40%;
+    }
+  
+    .rightSide .circle {
+      width: 400px;
+    }
+  
+    .rightSide .phoneImg {
+      width: 250px;
+    }
+  
+    .contact {
+      width: 70%;
+    }
+  
+    .footerUp {
+      padding: 20px;
+      gap: 30px;
+    }
+  }
+  
+  /* For mobile phones */
+  @media screen and (max-width: 768px) {
+    .navber {
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      background: rgb(250, 233, 188);
+    }
+  
+    .navber ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  
+    .front-page {
+      flex-direction: column;
+      padding: 80px 20px 20px;
+      height: auto;
+    }
+  
+    .in-front-page {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .front-img {
+      display: none;
+    }
+  
+    .buttons {
+      justify-content: center;
+    }
+  
+    .work {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .pro {
+      width: 90%;
+    }
+  
+    .contant {
+      margin-top: 50px;
+    }
+  
+    .contant-box {
+      width: 90%;
+    }
+  
+    .dishes {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  
+    .target {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .img-target {
+      display: none;
+    }
+  
+    .terget-page {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .discount {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .leftSide {
+      width: 90%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .rightSide .circle {
+      width: 300px;
+    }
+  
+    .rightSide .phoneImg {
+      width: 200px;
+    }
+  
+    .contact {
+      width: 90%;
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .footer-contant {
+      height: auto;
+    }
+  
+    .footerUp {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .summry, .links, .news {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .send-news {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    #in-news {
+      width: 100%;
+    }
+  }
+  
+  /* For very small screens */
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .info, .start {
+      width: 200px;
+    }
+  
+    .rightSide .circle {
+      width: 250px;
+    }
+  
+    .rightSide .phoneImg {
+      width: 150px;
+    }
+  
+    .contact {
+      transform: translate(0, 15px);
+    }
+  
+    .footerDwon h4 {
+      font-size: 14px;
+    }
+  }
+  
+  /* Fix for horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Improve touch targets on mobile */
+  @media (hover: none) {
+    .navber ul li a,
+    button,
+    .numDish {
+      padding: 12px;
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Navbar Styles */
+.navber {
+    position: fixed;
+    padding: 1rem 2rem;
+    background: rgba(250, 233, 188, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: jump-logo 2s;
+  }
+  
+  .navber ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .navber ul li {
+    list-style: none;
+    position: relative;
+  }
+  
+  .navber ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+  }
+  
+  .navber ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 179, 0);
+    transition: width 0.3s ease;
+  }
+  
+  .navber ul li a:hover::after,
+  .navber ul li a.active::after {
+    width: 100%;
+  }
+  
+  .navber ul li a:hover,
+  .navber ul li a.active {
+    color: rgb(255, 179, 0);
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #333;
+    transition: all 0.3s ease;
+  }
+  
+  /* Scroll behavior */
+  .navber.scrolled {
+    background: rgba(250, 233, 188, 0.98);
+    padding: 0.8rem 2rem;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .navber {
+      padding: 1rem;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+  
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  
+    .navber ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(250, 233, 188, 0.98);
+      padding: 1rem;
+      gap: 1rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  
+    .navber ul.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .navber ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navber ul li a {
+      display: block;
+      padding: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    .navber {
+      padding: 0.8rem;
+    }
+  }
